@@ -74,7 +74,7 @@ public class ObjetoEnviaEmail {
 		Session session = Session.getInstance(properties, new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("<inserir o e-mail remetente>", "<inserir aqui a senha  do e-mail>");
+				return new PasswordAuthentication("<inserir o e-mail do titular>", "<inserir aqui a senha  do e-mail>");
 			}
 		});
 
@@ -93,13 +93,6 @@ public class ObjetoEnviaEmail {
 		Transport.send(message);
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 
 	public String getIdade() {
 		return idade;
