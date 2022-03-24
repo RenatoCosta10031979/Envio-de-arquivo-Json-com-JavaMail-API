@@ -1,0 +1,10 @@
+[
+  {
+    "nomeRemetente": "Renato Costa",
+    "senha": "ACEGHJace1357",
+    "emailRemetente": "rgcfisica@gmail.com",
+    "emailDestinatario": "jsrenatoguccing@gmail.com",
+    "tituloEmail": "Aprendendo JavaMail API",
+    "conteudoEmail": "Olá, seja bem vindo ao curso de JavaMAail API. Parabéns você está progredindo a cada dia. :)"
+  }
+]

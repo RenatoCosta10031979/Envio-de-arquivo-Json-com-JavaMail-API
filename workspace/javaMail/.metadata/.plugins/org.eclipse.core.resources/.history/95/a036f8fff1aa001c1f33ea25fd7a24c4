@@ -1,0 +1,20 @@
+package enviando.email;
+
+import javax.swing.JOptionPane;
+
+public class AppTest {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		ObjetoEnviaEmail email = new ObjetoEnviaEmail();
+		/*Caso o e-mail não esteja sendo enviado então
+		 * coloque um tempo de espera mas, utiliza esse recuso somente para testes.*/
+		Thread.sleep(3000);
+		
+		email.testeEmail();
+		
+		 JOptionPane.showMessageDialog(null, "e-mail enviado com sucesso");
+	}
+	
+	
+}

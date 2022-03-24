@@ -1,0 +1,41 @@
+package enviando.email;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.mail.MessagingException;
+import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class AppTest {
+
+	public static void main(String[] args) throws MessagingException, InterruptedException, IOException {
+
+		ObjetoEnviaEmail email = new ObjetoEnviaEmail();
+
+		email.setNomeRemetente("Renato Costa");
+		email.setEmailRemetente("rgcfisica@gmail.com");
+		email.setSenha("*********");
+		email.setEmailDestinatario("jsrenatoguccing@gmail.com");
+		email.setTituloEmail("Aprendendo JavaMail API");
+
+		List<ObjetoEnviaEmail> objetoEnviaEmail = new ArrayList<ObjetoEnviaEmail>();
+		objetoEnviaEmail.add(email);
+
+		email.testeEmail(objetoEnviaEmail);
+
+		/*
+		 * Caso o e-mail não esteja sendo enviado então coloque um tempo de espera mas,
+		 * utiliza esse recuso somente para testes.
+		 */
+		Thread.sleep(3000);
+
+		JOptionPane.showMessageDialog(null, "e-mail enviado com sucesso");
+	}
+
+}

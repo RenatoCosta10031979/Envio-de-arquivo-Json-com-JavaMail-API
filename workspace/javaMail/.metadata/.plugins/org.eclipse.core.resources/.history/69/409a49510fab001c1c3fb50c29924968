@@ -1,0 +1,14 @@
+[
+  {
+    "nomeRemetente": "Renato Costa",
+    "senha": "ACEGHJace1357",
+    "emailRemetente": "rgcfisica@gmail.com",
+    "emailDestinatario": "jsrenatoguccing@gmail.com",
+    "tituloEmail": "Aprendendo JavaMail API",
+    "nome": "Bartolomeu Silveira Jr.",
+    "idade": 34,
+    "profissao": "Programador BackEnd",
+    "pais": "Brasil",
+    "estado": "São Paulo"
+  }
+]

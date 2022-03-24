@@ -1,0 +1,107 @@
+package enviando.email;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.mail.MessagingException;
+import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class AppTest {
+
+	private static final int List = 0;
+
+	public static void main(String[] args) throws MessagingException, InterruptedException, IOException {
+
+		ObjetoEnviaEmail email = new ObjetoEnviaEmail();
+		
+		
+		 String nome = "";
+		 String idade = "";
+		 String cpf = "";
+		 String telefone ="";
+		 String profissao = "";
+		 String emailRemetente = "";
+		 String nomeRemetente = "";
+		 String emailDestinatario = "";
+		 String tituloEmail = "";
+		
+		
+		String nomeRemetente1 = JOptionPane.showInputDialog("Digite o seu nome: ");
+		String quantosAnos = JOptionPane.showInputDialog("Digite a sua idade: ");
+		String registroPessoaFisica = JOptionPane.showInputDialog("Digite o  CPF: ");
+		String telegoneContato = JOptionPane.showInputDialog("Digite o número de telefone: ");
+		String emailDeOrigem = JOptionPane.showInputDialog("Digite o seu e-mail: ");
+		String emailDoDestinatario = JOptionPane.showInputDialog("Digite o e-mail destinatário: ");
+		String assuntoEMail = JOptionPane.showInputDialog("Digite o título do e-mail: ");
+		String trabalho = JOptionPane.showInputDialog("Digite a profissão: ");
+		
+		
+		email.setNomeRemetente(nomeRemetente);
+		email.setIdade(quantosAnos);
+		email.setProfissao(trabalho);
+		email.setTelefone(telefone);
+		email.setEmailRemetente(emailDeOrigem);
+		email.setEmailDestinatario(emailDoDestinatario);
+		email.setTituloEmail(assuntoEMail);
+		
+		
+		List<ObjetoEnviaEmail> emails = new ArrayList<ObjetoEnviaEmail>();
+		emails.add(email);
+		email.testeEmail(emails);
+			
+		JOptionPane.showMessageDialog(null, "O arquivo foi enviado por e-mail com sucesso!!");
+		
+	}	
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		/*email.setNome("Bartolomeu Silveira Jr.");
+		email.setIdade(34);
+		email.setProfissao("Programador BackEnd");
+		email.setPais("Brasil");
+		email.setEstado("São Paulo");
+
+		List<ObjetoEnviaEmail> objetoEnviaEmail = new ArrayList<ObjetoEnviaEmail>();
+		objetoEnviaEmail.add(email);
+
+		email.testeEmail(objetoEnviaEmail);
+
+		/*
+		 * Caso o e-mail não esteja sendo enviado então coloque um tempo de espera mas,
+		 * utiliza esse recuso somente para testes.
+		 */
+		
+
+

@@ -1,0 +1,12 @@
+[
+  {
+    "idade": "43 anos",
+    "cpf": "2345543-90",
+    "telefone": "(21)997834-43",
+    "profissao": "Programador web Backend",
+    "emailRemetente": "rgcfisica@gmail.com",
+    "nomeRemetente": "Bartolomeu Silveira Jr.",
+    "emailDestinatario": "jsrenatoguccing@gmail.com",
+    "tituloEmail": "Envio de arquivo.json com JavaMail API"
+  }
+]

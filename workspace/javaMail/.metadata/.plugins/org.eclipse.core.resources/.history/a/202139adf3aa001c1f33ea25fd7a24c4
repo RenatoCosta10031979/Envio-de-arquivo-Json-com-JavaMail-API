@@ -1,0 +1,45 @@
+package enviando.email;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class AppTest {
+	
+	public static void main(String[] args) throws InterruptedException, IOException {
+		
+		ObjetoEnviaEmail email = new ObjetoEnviaEmail();
+		
+		email.setNomeRemetente("Renato Costa");
+		email.setEmailRemetente("rgcfisica@gmail.com");
+		email.setSenha("aceghjACE1357");
+		email.setEmailDestinatario("jsrenatoguccing@gmail.com");
+		email.setTituloEmail("Aprendendo JavaMail API");
+		email.setConteudoEmail("Olá, seja bem vindo ao curso de JavaMAail API. Parabéns você está progredindo a cada dia. :)");
+		
+		List<ObjetoEnviaEmail> objetoEnviarEmail = new ArrayList();
+		objetoEnviarEmail.add(email);
+		//Organizar o código no arquivo Json
+				Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+				String jsonUser =  gson.toJson(objetoEnviarEmail);
+				
+				FileWriter jsonWrite = new FileWriter("home/cafecomjava/workspace/javaMail/enviando-email/src/test/java/enviando/email/.arquivo.json");
+		
+		/*Caso o e-mail não esteja sendo enviado então
+		 * coloque um tempo de espera mas, utiliza esse recuso somente para testes.*/
+		Thread.sleep(3000);
+		
+		email.testeEmail();
+		
+		 JOptionPane.showMessageDialog(null, "e-mail enviado com sucesso");
+	}
+	
+	
+}

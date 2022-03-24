@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+/home/cafecomjava/workspace/javaMail/.metadata/.plugins/org.eclipse.jdt.core
+1782777949.index
+239238995.index
+1865797976.index
+3660550067.index
+1923391189.index
+3272294660.index
+3617546650.index
+1114528792.index
